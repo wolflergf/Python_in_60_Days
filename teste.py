@@ -1,5 +1,7 @@
-def get_person_name(name: str) -> str:
-    return "Hi {}".format(name.title())
+def get_nr_items(input_list):
+    items = input_list.split(",")
+    return len(items)
 
 
-print(get_person_name("guilherme luciano"))
+lista1 = "apple, banana, coco"
+print(get_nr_items(lista1))
