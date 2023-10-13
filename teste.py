@@ -1,7 +1,4 @@
-def get_nr_items(input_list):
-    items = input_list.split(",")
-    return len(items)
+import math
+rads = math.radians(20)
 
-
-lista1 = "apple, banana, coco"
-print(get_nr_items(lista1))
+print(rads)
