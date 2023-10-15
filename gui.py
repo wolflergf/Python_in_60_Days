@@ -9,16 +9,22 @@ import PySimpleGUI as sg
 # window.read()
 # window.close()
 
-sg.theme("DarkAmber")
-layout = [[sg.Text("Enter a to-do"), sg.InputText(tooltip="Enter to-do"), sg.Button("Add")],
-          [sg.Button("Exit")]]
+layout = [[sg.Text("Enter a to-do")],
+          [sg.InputText(tooltip="Enter to-do", key="todo"), sg.Button("Add")]]
 
-window = sg.Window("My To-Do App", layout)
+window = sg.Window("My To-Do App", layout, font=("Helvetica", 12))
 
 while True:
     event, values = window.read()
-    if event == sg.WIN_CLOSED or event == "Exit":
-        break
-    print("You entered ", values[0])
+    print(event)
+    print(values)
+    match event:
+        case "Add":
+            todos = functions.get_todos()
+            new_todo = values["todo"] + "\n"
+            todos.append(new_todo)
+            functions.write_todos(todos)
+        case sg.WIN_CLOSED:
+            break
 
 window.close()
