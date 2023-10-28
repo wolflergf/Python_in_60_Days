@@ -1,8 +1,8 @@
 import PySimpleGUI as sg
 
-layout = [[sg.Text("Enter feet: "), sg.Input(key="feet")],
-          [sg.Text("Enter a inches: "), sg.Input(key="inches")],
-          [sg.Button("Convert"), sg.Button("Exit"), sg.Text(key="output")]]
+layout = [[sg.Text("Enter feet: "), sg.Push(), sg.Input(key="feet")],
+          [sg.Text("Enter a inches: "), sg.Push(), sg.Input(key="inches")],
+          [sg.Button("Convert"), sg.Button("Exit"), sg.Text(key="output"), sg.Push()]]
 
 window = sg.Window("Convertor", layout)
 
