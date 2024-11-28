@@ -45,7 +45,7 @@ Python_in_60_Days/
 
 ### 🌐 Professional Links
 
-- **LinkedIn**: [Your Name]
+- **LinkedIn**: [Wolfler](https://www.linkedin.com/in/wolflergf/)
 - **Portfolio**: [Portfolio Link]
 
 ### 📝 Licence
