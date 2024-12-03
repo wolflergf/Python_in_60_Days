@@ -1,6 +1,11 @@
+import os
+import sys
 import time
 
-from modules import functions
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "modules"))
+)
+import functions
 
 now = time.strftime("%b %d, %Y %H:%M:%S")
 print("It is", now)

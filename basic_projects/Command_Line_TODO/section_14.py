@@ -1,4 +1,10 @@
-from modules import functions
+import os
+import sys
+
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "modules"))
+)
+import functions
 
 while True:
     user_action = input("Type add / show / edit / complete / exit: ").lower().strip()
